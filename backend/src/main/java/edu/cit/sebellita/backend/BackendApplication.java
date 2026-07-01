@@ -1,13 +1,13 @@
-package edu.cit.sebellita.dormistay;
+package edu.cit.sebellita.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DormistayApplication {
+public class BackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DormistayApplication.class, args);
+		SpringApplication.run(BackendApplication.class, args);
 	}
 
 }
