@@ -33,7 +33,7 @@ public class UserAPIController {
         User user = userService.createUser(request);
         UserRegisterResponse response = new UserRegisterResponse();
         response.setEmail(user.getEmail());
-        response.setUsername(user.getUsername());
+        response.setFullname(user.getFullname());
 
         return ResponseEntity.ok(response);
     }

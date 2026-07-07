@@ -1,6 +1,6 @@
 package edu.cit.sebellita.backend.authentication.entity;
 
-public enum UserRole {
-    ADMIN,
-    RESIDENT
+public enum UserStatus {
+    ACTIVE,
+    INACTIVE
 }

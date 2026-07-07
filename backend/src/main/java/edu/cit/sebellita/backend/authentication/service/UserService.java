@@ -20,12 +20,12 @@ public class UserService {
         }
 
         User newUser = new User();
+        newUser.setId(user.getId());
         newUser.setEmail(user.getEmail());
-        newUser.setFirstname(user.getFirstname());
-        newUser.setMiddlename(user.getMiddlename());
-        newUser.setLastname(user.getLastname());
-        newUser.setUsername(user.getUsername());
+        newUser.setFullname(user.getFullname());
         newUser.setPassword(user.getPassword());
+        newUser.setRole(user.getRole());
+        newUser.setStatus(user.getStatus());
 
         return userRepository.save(newUser);
     }

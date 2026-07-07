@@ -2,15 +2,15 @@ package edu.cit.sebellita.backend.authentication.dto;
 
 public class UserRegisterResponse {
 
-    private String username;
+    private String fullname;
     private String email;
 
-    public String getUsername() {
-        return username;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
     public String getEmail() {

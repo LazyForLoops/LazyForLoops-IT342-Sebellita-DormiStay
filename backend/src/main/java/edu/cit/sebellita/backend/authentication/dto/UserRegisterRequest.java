@@ -1,19 +1,15 @@
 package edu.cit.sebellita.backend.authentication.dto;
 
 import edu.cit.sebellita.backend.authentication.entity.UserRole;
-import jakarta.persistence.Column;
-import jakarta.persistence.Enumerated;
+import edu.cit.sebellita.backend.authentication.entity.UserStatus;
 
 public class UserRegisterRequest {
 
     private Long Id;
-    private String username;
     private String email;
-    private String firstname;
-    private String lastname;
-    private String middlename;
-
+    private String fullname;
     private UserRole role;
+    private UserStatus status;
     private String password;
 
     public Long getId() {
@@ -24,14 +20,6 @@ public class UserRegisterRequest {
         Id = id;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -40,28 +28,20 @@ public class UserRegisterRequest {
         this.email = email;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
-    public String getLastname() {
-        return lastname;
+    public UserStatus getStatus() {
+        return status;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public String getMiddlename() {
-        return middlename;
-    }
-
-    public void setMiddlename(String middlename) {
-        this.middlename = middlename;
+    public void setStatus(UserStatus status) {
+        this.status = status;
     }
 
     public UserRole getRole() {

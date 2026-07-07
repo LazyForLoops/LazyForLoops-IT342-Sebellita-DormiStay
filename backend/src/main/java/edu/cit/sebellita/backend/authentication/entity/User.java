@@ -9,18 +9,18 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long Id;
-
-    @Column(unique = true)
-    private String username;
     @Column(unique = true)
     private String email;
-    private String firstname;
-    private String lastname;
-    private String middlename;
+    private String fullname;
     @Enumerated
     @Column(nullable = false)
     private UserRole role;
     private String password;
+    @Enumerated
+    @Column(nullable = false)
+    private UserStatus status;
+    private String created_at;
+    private String updated_at;
 
     public Long getId() {
         return Id;
@@ -30,12 +30,36 @@ public class User {
         Id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public UserStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(UserStatus status) {
+        this.status = status;
+    }
+
+    public String getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(String created_at) {
+        this.created_at = created_at;
+    }
+
+    public String getUpdated_at() {
+        return updated_at;
+    }
+
+    public void setUpdated_at(String updated_at) {
+        this.updated_at = updated_at;
     }
 
     public String getEmail() {
@@ -44,30 +68,6 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public String getMiddlename() {
-        return middlename;
-    }
-
-    public void setMiddlename(String middlename) {
-        this.middlename = middlename;
     }
 
     public UserRole getRole() {
