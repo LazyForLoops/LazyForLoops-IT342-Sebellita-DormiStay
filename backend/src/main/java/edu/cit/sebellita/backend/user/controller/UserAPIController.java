@@ -1,9 +1,9 @@
-package edu.cit.sebellita.backend.authentication.controller;
+package edu.cit.sebellita.backend.user.controller;
 
-import edu.cit.sebellita.backend.authentication.entity.User;
-import edu.cit.sebellita.backend.authentication.dto.UserRegisterRequest;
-import edu.cit.sebellita.backend.authentication.dto.UserRegisterResponse;
-import edu.cit.sebellita.backend.authentication.service.UserService;
+import edu.cit.sebellita.backend.user.entity.User;
+import edu.cit.sebellita.backend.user.dto.UserRegisterRequest;
+import edu.cit.sebellita.backend.user.dto.UserRegisterResponse;
+import edu.cit.sebellita.backend.user.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

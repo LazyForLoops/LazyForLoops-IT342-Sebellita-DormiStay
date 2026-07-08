@@ -1,6 +1,6 @@
-package edu.cit.sebellita.backend.authentication.controller;
+package edu.cit.sebellita.backend.index.controller;
 
-import edu.cit.sebellita.backend.authentication.dto.UserRegisterRequest;
+import edu.cit.sebellita.backend.user.dto.UserRegisterRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

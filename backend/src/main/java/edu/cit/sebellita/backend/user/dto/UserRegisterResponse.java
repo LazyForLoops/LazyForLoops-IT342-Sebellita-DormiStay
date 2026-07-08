@@ -1,4 +1,4 @@
-package edu.cit.sebellita.backend.authentication.dto;
+package edu.cit.sebellita.backend.user.dto;
 
 public class UserRegisterResponse {
 

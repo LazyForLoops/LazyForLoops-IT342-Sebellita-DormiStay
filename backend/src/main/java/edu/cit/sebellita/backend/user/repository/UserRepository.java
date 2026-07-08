@@ -1,6 +1,6 @@
-package edu.cit.sebellita.backend.authentication.repository;
+package edu.cit.sebellita.backend.user.repository;
 
-import edu.cit.sebellita.backend.authentication.entity.User;
+import edu.cit.sebellita.backend.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

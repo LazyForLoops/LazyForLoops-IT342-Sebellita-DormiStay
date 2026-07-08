@@ -1,7 +1,7 @@
-package edu.cit.sebellita.backend.authentication.dto;
+package edu.cit.sebellita.backend.user.dto;
 
-import edu.cit.sebellita.backend.authentication.entity.UserRole;
-import edu.cit.sebellita.backend.authentication.entity.UserStatus;
+import edu.cit.sebellita.backend.user.entity.UserRole;
+import edu.cit.sebellita.backend.user.entity.UserStatus;
 
 public class UserRegisterRequest {
 

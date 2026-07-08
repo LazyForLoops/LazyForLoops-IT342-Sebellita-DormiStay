@@ -1,4 +1,4 @@
-package edu.cit.sebellita.backend.authentication.entity;
+package edu.cit.sebellita.backend.user.entity;
 
 import jakarta.persistence.*;
 

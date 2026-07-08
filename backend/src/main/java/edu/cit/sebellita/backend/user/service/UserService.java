@@ -1,8 +1,8 @@
-package edu.cit.sebellita.backend.authentication.service;
+package edu.cit.sebellita.backend.user.service;
 
-import edu.cit.sebellita.backend.authentication.entity.User;
-import edu.cit.sebellita.backend.authentication.repository.UserRepository;
-import edu.cit.sebellita.backend.authentication.dto.UserRegisterRequest;
+import edu.cit.sebellita.backend.user.entity.User;
+import edu.cit.sebellita.backend.user.repository.UserRepository;
+import edu.cit.sebellita.backend.user.dto.UserRegisterRequest;
 import org.springframework.stereotype.Service;
 
 @Service
