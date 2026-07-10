@@ -1,9 +1,12 @@
 package edu.cit.sebellita.backend.user.service;
 
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import edu.cit.sebellita.backend.user.dto.UserRegisterRequest;
 import edu.cit.sebellita.backend.user.entity.User;
 import edu.cit.sebellita.backend.user.repository.UserRepository;
-import edu.cit.sebellita.backend.user.dto.UserRegisterRequest;
-import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
@@ -22,12 +25,19 @@ public class UserService {
         User newUser = new User();
         newUser.setId(user.getId());
         newUser.setEmail(user.getEmail());
-        newUser.setFullname(user.getFullname());
+        newUser.setFirstname(user.getFirstname());
+        newUser.setLastname(user.getLastname());
+        newUser.setMiddlename(user.getMiddlename());
         newUser.setPassword(user.getPassword());
         newUser.setRole(user.getRole());
         newUser.setStatus(user.getStatus());
 
         return userRepository.save(newUser);
+    }
+
+    public Optional<User> loginUser(String email, String password) {
+        return userRepository.findByEmail(email)
+                .filter(user -> password != null && password.equals(user.getPassword()));
     }
 
 }

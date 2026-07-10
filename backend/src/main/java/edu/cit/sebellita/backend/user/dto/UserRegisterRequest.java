@@ -7,7 +7,9 @@ public class UserRegisterRequest {
 
     private Long Id;
     private String email;
-    private String fullname;
+    private String firstname;
+    private String lastname;
+    private String middlename;
     private UserRole role;
     private UserStatus status;
     private String password;
@@ -28,12 +30,28 @@ public class UserRegisterRequest {
         this.email = email;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getMiddlename() {
+        return middlename;
+    }
+
+    public void setMiddlename(String middlename) {
+        this.middlename = middlename;
     }
 
     public UserStatus getStatus() {

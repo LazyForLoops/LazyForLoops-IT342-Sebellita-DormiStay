@@ -11,7 +11,9 @@ public class User {
     private Long Id;
     @Column(unique = true)
     private String email;
-    private String fullname;
+    private String firstname;
+    private String lastname;
+    private String middlename;
     @Enumerated
     @Column(nullable = false)
     private UserRole role;
@@ -30,12 +32,28 @@ public class User {
         Id = id;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getMiddlename() {
+        return middlename;
+    }
+
+    public void setMiddlename(String middlename) {
+        this.middlename = middlename;
     }
 
     public UserStatus getStatus() {

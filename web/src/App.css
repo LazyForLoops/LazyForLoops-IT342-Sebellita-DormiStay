@@ -86,6 +86,13 @@ input{
     border-radius:6px;
 }
 
+.form-message{
+    margin-top:12px;
+    text-align:center;
+    color:#2563eb;
+    font-size:0.95rem;
+}
+
 /* Dashboard */
 
 .dashboard{
