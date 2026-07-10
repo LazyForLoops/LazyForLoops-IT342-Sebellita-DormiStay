@@ -3,7 +3,7 @@ package edu.cit.sebellita.backend.user.dto;
 import edu.cit.sebellita.backend.user.entity.UserRole;
 import edu.cit.sebellita.backend.user.entity.UserStatus;
 
-public class UserRegisterRequest {
+public class UserAuthRequest {
 
     private Long Id;
     private String email;

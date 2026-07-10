@@ -1,6 +1,6 @@
 package edu.cit.sebellita.backend.user.dto;
 
-public class UserRegisterResponse {
+public class UserAuthResponse {
 
     private String lastname;
     private String email;

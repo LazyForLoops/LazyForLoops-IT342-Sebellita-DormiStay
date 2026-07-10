@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import edu.cit.sebellita.backend.user.dto.UserRegisterRequest;
+import edu.cit.sebellita.backend.user.dto.UserAuthRequest;
 import edu.cit.sebellita.backend.user.entity.User;
 import edu.cit.sebellita.backend.user.repository.UserRepository;
 
@@ -17,7 +17,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public User createUser(UserRegisterRequest user){
+    public User createUser(UserAuthRequest user){
         if(userRepository.existsByEmail(user.getEmail())){ //can also be userRepository.existByLastnameOrFirstnameSortByAsc(user.getLastname(),user.getFirstname()) with appropriate methods in UserRepository
             throw new IllegalArgumentException("User already exists.");
         }

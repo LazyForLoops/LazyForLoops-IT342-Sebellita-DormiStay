@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import edu.cit.sebellita.backend.user.dto.UserRegisterRequest;
-import edu.cit.sebellita.backend.user.dto.UserRegisterResponse;
+import edu.cit.sebellita.backend.user.dto.UserAuthRequest;
+import edu.cit.sebellita.backend.user.dto.UserAuthResponse;
 import edu.cit.sebellita.backend.user.entity.User;
 import edu.cit.sebellita.backend.user.service.UserService;
 
@@ -38,10 +38,10 @@ public class UserAPIController {
     }
 
     @PostMapping
-    public ResponseEntity<?> postUsers(@RequestBody UserRegisterRequest request) {
+    public ResponseEntity<?> postUsers(@RequestBody UserAuthRequest request) {
         try {
             User user = userService.createUser(request);
-            UserRegisterResponse response = new UserRegisterResponse();
+            UserAuthResponse response = new UserAuthResponse();
             response.setEmail(user.getEmail());
             response.setLastname(user.getLastname());
 
@@ -56,7 +56,7 @@ public class UserAPIController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody UserRegisterRequest request) {
+    public ResponseEntity<?> login(@RequestBody UserAuthRequest request) {
         if (request == null || request.getEmail() == null || request.getPassword() == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body(Map.of("message", "Email and password are required."));
@@ -65,7 +65,7 @@ public class UserAPIController {
         Optional<User> foundUser = userService.loginUser(request.getEmail(), request.getPassword());
         if (foundUser.isPresent()) {
             User user = foundUser.get();
-            UserRegisterResponse response = new UserRegisterResponse();
+            UserAuthResponse response = new UserAuthResponse();
             response.setEmail(user.getEmail());
             response.setLastname(user.getLastname());
             return ResponseEntity.ok(response);
