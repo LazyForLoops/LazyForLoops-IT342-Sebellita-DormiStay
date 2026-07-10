@@ -43,7 +43,7 @@ public class UserAPIController {
             User user = userService.createUser(request);
             UserRegisterResponse response = new UserRegisterResponse();
             response.setEmail(user.getEmail());
-            response.setFullname(user.getFullname());
+            response.setLastname(user.getLastname());
 
             return ResponseEntity.ok(response);
         } catch (IllegalArgumentException ex) {
@@ -67,7 +67,7 @@ public class UserAPIController {
             User user = foundUser.get();
             UserRegisterResponse response = new UserRegisterResponse();
             response.setEmail(user.getEmail());
-            response.setFullname(user.getFullname());
+            response.setLastname(user.getLastname());
             return ResponseEntity.ok(response);
         }
 

@@ -31,7 +31,7 @@ class UserAPIControllerTest {
         User user = new User();
         user.setId(1L);
         user.setEmail("student@example.com");
-        user.setFullname("Student User");
+        user.setLastname("Student User");
         user.setPassword("secret123");
         user.setRole(UserRole.RESIDENT);
         user.setStatus(UserStatus.ACTIVE);
