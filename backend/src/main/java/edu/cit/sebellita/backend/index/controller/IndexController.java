@@ -1,11 +1,12 @@
 package edu.cit.sebellita.backend.index.controller;
 
-import edu.cit.sebellita.backend.user.dto.UserRegisterRequest;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import edu.cit.sebellita.backend.user.dto.UserAuthRequest;
+import jakarta.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("/")
@@ -23,7 +24,7 @@ public class IndexController {
 
     @GetMapping("/register")
     public String register(Model model){
-        model.addAttribute("user", new UserRegisterRequest());
+        model.addAttribute("user", new UserAuthRequest());
         return "register";
     }
 
